@@ -1,0 +1,61 @@
+<!-- This is going to be a Form -->
+<div class="title">
+    <h1>Create Your Profile</h1>
+</div>
+
+<fieldset>
+<div>
+    <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit(userProfileForm.value)">
+      <!-- EMAIL -->
+      <div class="form-group">
+        <label for="dob">
+          Date of Birth
+        </label>
+        <input id="dob" type="text" formControlName="dob" class="form-control"/>
+      </div>
+  
+      <!-- Address -->
+      <div class="form-group">
+        <label for="home-address">
+          Home Address
+        </label>
+        <input id="home-address" type="text" formControlName="homeAddress" class="form-control"/>
+      </div>
+
+      <!-- Favorite Food -->
+      <div class=form-group>
+        <label for="favorite-food">
+          Favorite Food
+        </label>
+        <input id="favorite-food" type="text" formControlName="favoriteFood" class="form-control"/>
+      </div>
+
+       <!-- Favorite Movie -->
+       <div class="form-group">
+        <label for="favorite-movie">
+          Favorite Movie
+        </label>
+        <input id="favorite-movie" type="text" formControlName="favoriteMovie" class="form-control"/>
+      </div>
+
+      <!-- Favorite Movie -->
+      <div class="form-group">
+        <label for="favorite-artist">
+          Favorite Artist
+        </label>
+        <input id="favorite-artist" type="text" formControlName="favoriteArtist" class="form-control"/>
+      </div>
+
+      <!-- Favorite Movie -->
+      <div class="form-group">
+        <label for="favorite-hobbies">
+          Hobbies
+        </label>
+        <input id="hobbies" type="text" formControlName="hobbies" class="form-control"/>
+      </div>
+  
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</fieldset>
+  
