@@ -7,5 +7,5 @@ export interface IUser {
     firstName: string;
     lastName: string;
     token?: string;
-    userProfile: IUserProfile;
+    userProfile: object;
 }

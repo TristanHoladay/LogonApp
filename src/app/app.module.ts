@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from "@angular/common/http";
 import { AuthService } from './services/auth.service';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileService } from './services/user-profile.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, UserProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,61 +1,118 @@
 <!-- This is going to be a Form -->
 <div class="title">
-    <h1>Create Your Profile</h1>
+  <h1>Create Your Profile</h1>
 </div>
 
 <fieldset>
-<div>
-    <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit(userProfileForm.value)">
-      <!-- EMAIL -->
+  <div>
+    <form
+      [formGroup]="userProfileForm"
+      (ngSubmit)="onSubmit(userProfileForm.value)"
+    >
+      <!--FIRST NAME-->
+      <div class="form-group">
+        <label for="firstName">
+          <h4>First Name</h4>
+        </label>
+        <input
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          class="form-control"
+        />
+      </div>
+
+      <!-- LAST NAME-->
+      <div class="form-group">
+        <label for="lastName">
+          <h4>Last Name</h4>
+        </label>
+        <input
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          class="form-control"
+        />
+      </div>
+      <!-- DOB -->
       <div class="form-group">
         <label for="dob">
-          Date of Birth
+          <h4>Date of Birth</h4>
         </label>
-        <input id="dob" type="text" formControlName="dob" class="form-control"/>
+        <input
+          id="dob"
+          type="text"
+          formControlName="dob"
+          class="form-control"
+        />
       </div>
-  
+
       <!-- Address -->
       <div class="form-group">
         <label for="home-address">
-          Home Address
+          <h4>Home Address</h4>
         </label>
-        <input id="home-address" type="text" formControlName="homeAddress" class="form-control"/>
+        <input
+          id="home-address"
+          type="text"
+          formControlName="homeAddress"
+          class="form-control"
+        />
       </div>
 
       <!-- Favorite Food -->
-      <div class=form-group>
+      <div class="form-group">
         <label for="favorite-food">
-          Favorite Food
+          <h4>Favorite Food</h4>
         </label>
-        <input id="favorite-food" type="text" formControlName="favoriteFood" class="form-control"/>
+        <input
+          id="favorite-food"
+          type="text"
+          formControlName="favoriteFood"
+          class="form-control"
+        />
       </div>
 
-       <!-- Favorite Movie -->
-       <div class="form-group">
+      <!-- Favorite Movie -->
+      <div class="form-group">
         <label for="favorite-movie">
-          Favorite Movie
+          <h4>Favorite Movie</h4>
         </label>
-        <input id="favorite-movie" type="text" formControlName="favoriteMovie" class="form-control"/>
+        <input
+          id="favorite-movie"
+          type="text"
+          formControlName="favoriteMovie"
+          class="form-control"
+        />
       </div>
 
       <!-- Favorite Movie -->
       <div class="form-group">
         <label for="favorite-artist">
-          Favorite Artist
+          <h4>Favorite Artist</h4>
         </label>
-        <input id="favorite-artist" type="text" formControlName="favoriteArtist" class="form-control"/>
+        <input
+          id="favorite-artist"
+          type="text"
+          formControlName="favoriteArtist"
+          class="form-control"
+        />
       </div>
 
       <!-- Favorite Movie -->
       <div class="form-group">
         <label for="favorite-hobbies">
-          Hobbies
+          <h4>Hobbies</h4>
         </label>
-        <input id="hobbies" type="text" formControlName="hobbies" class="form-control"/>
+        <input
+          id="hobbies"
+          type="text"
+          formControlName="hobbies"
+          class="form-control"
+        />
       </div>
-  
+
       <button type="submit">Save</button>
     </form>
   </div>
 </fieldset>
-  
