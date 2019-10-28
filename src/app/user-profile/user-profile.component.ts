@@ -12,6 +12,7 @@ import { UserProfileService } from '../services/user-profile.service';
 export class UserProfileComponent implements OnInit {
   userProfileForm: FormGroup;
   profile: object = {};
+  showData = false;
 
   constructor(private formBuilder: FormBuilder, private profileService: UserProfileService) { }
 
@@ -30,6 +31,8 @@ export class UserProfileComponent implements OnInit {
 
 
   onSubmit(userProfile: any) {
-    this.profileService.post(userProfile).subscribe(console.log);
+    this.profileService.post(userProfile).subscribe(data => {userProfile = data});
+    this.profile = userProfile;
+    this.showData = true;
   }
 }

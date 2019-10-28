@@ -3,6 +3,10 @@
   <h1>Create Your Profile</h1>
 </div>
 
+<div *ngIf="showData">
+    {{ userProfileForm.value | json}}
+  </div>
+
 <fieldset>
   <div>
     <form
@@ -116,3 +120,7 @@
     </form>
   </div>
 </fieldset>
+
+<div *ngIf="showData">
+  {{ userProfileForm.value | json}}
+</div>

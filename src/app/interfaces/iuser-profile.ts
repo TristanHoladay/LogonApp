@@ -1,5 +1,5 @@
 export interface IUserProfile {
-    user: object;git 
+    user: object;
     DOB: string;
     homeAddress: string;
     favoriteFood: string;
